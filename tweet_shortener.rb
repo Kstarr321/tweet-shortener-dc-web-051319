@@ -22,33 +22,8 @@ def word_substituter(tweet)
   
 end
 
-def bulk_tweet_shortener(arr_tweets)
-  arr_tweets.map do |tweet|
-    split_tweet = tweet.downcase.split(" ")
-    subbed_tweet = []
-    split_tweet.map do |word|
-      a = word.to_sym
-      if dictionary[a]
-        subbed_tweet << dictionary[a]
-      
-      else 
-        subbed_tweet << word 
-
-
-      end
-    end
-    string_tweet = subbed_tweet.join(" ").capitalize
-    split_array = string_tweet.split(" ")
-    final_arr = []
-    split_array.map do |wordy|
-      if wordy == "i"
-        final_arr << wordy = "I"
-      else 
-        final_arr << wordy
-      end 
-      
-    end
-    puts final_arr.join(" ")
+def bulk_tweet_shortener(tweet)
+  tweet.map do |phrase|
+    puts word_substituter(phrase)
   end
-  
-end 
+end
