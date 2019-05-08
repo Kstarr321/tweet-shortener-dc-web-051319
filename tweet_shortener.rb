@@ -1,4 +1,4 @@
-ef dictionary 
+def dictionary 
   dict = {
     "hello" => 'hi',
     "to"=> "2",
@@ -13,7 +13,7 @@ ef dictionary
     "at" =>"@",
     "and" => "&",
     }
-end 
+end
 
 
 def word_substituter(tweet)
